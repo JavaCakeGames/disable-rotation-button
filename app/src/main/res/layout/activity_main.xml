@@ -24,7 +24,6 @@
         android:padding="4dp" />
 
       <Button
-        android:id="@+id/buttonRefresh"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="fill"
@@ -36,11 +35,9 @@
       style="?android:attr/buttonBarStyle"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:background="@color/buttonBar"
-      android:orientation="horizontal">
+      android:background="@color/buttonBar">
 
       <Button
-        android:id="@+id/buttonDisable"
         style="?android:attr/buttonBarButtonStyle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -50,7 +47,6 @@
         android:text="@string/disable" />
 
       <Button
-        android:id="@+id/buttonEnable"
         style="?android:attr/buttonBarButtonStyle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -66,16 +62,12 @@
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:maxWidth="640dp"
-      android:paddingLeft="4dp"
-      android:paddingTop="4dp"
-      android:paddingRight="4dp" />
+      android:padding="4dp" />
 
     <TextView
-      android:id="@+id/textHappy"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:gravity="center_horizontal"
-      android:includeFontPadding="false"
+      android:gravity="center"
       android:text="@string/happyRotating" />
 
   </LinearLayout>

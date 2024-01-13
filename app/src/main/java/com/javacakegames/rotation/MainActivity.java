@@ -17,7 +17,7 @@ public class MainActivity extends Activity {
 
   // todo: detect root before detecting if getting/setting rotation fails
 
-  Context context;
+  private Context context;
   private TextView textBefore;
   private boolean couldNotFetchShown;
 
@@ -27,7 +27,6 @@ public class MainActivity extends Activity {
     setContentView(R.layout.activity_main);
 
     textBefore = findViewById(R.id.textBefore);
-    textBefore.setText(Html.fromHtml(getString(R.string.textBefore), Html.FROM_HTML_MODE_COMPACT));
 
     TextView tv = findViewById(R.id.textAfter);
     tv.setText(Html.fromHtml(getString(R.string.textAfter), Html.FROM_HTML_MODE_COMPACT));
@@ -36,11 +35,6 @@ public class MainActivity extends Activity {
 
     refresh(null, null);
 
-  }
-
-  public void refresh(View view) {
-    textBefore.setText(Html.fromHtml(getString(R.string.textBefore).replace("Unknown", "Thinking"), Html.FROM_HTML_MODE_LEGACY));
-    refresh(null, null);
   }
 
   private int refresh(BufferedReader br, DataOutputStream os) {
@@ -81,7 +75,7 @@ public class MainActivity extends Activity {
         statusCode = -1;
     }
 
-    textBefore.setText(Html.fromHtml(getString(R.string.textBefore).replace("Unknown", status), Html.FROM_HTML_MODE_LEGACY));
+    displayStatus(status);
 
     return statusCode;
 
@@ -95,9 +89,14 @@ public class MainActivity extends Activity {
     toggle(1);
   }
 
+  public void displayStatus(String status) {
+    textBefore.setText(Html.fromHtml(getString(R.string.textBefore)
+      .replace("Unknown", status), Html.FROM_HTML_MODE_LEGACY));
+  }
+
   private void toggle(int value) {
 
-    textBefore.setText(Html.fromHtml(getString(R.string.textBefore).replace("Unknown", "Thinking"), Html.FROM_HTML_MODE_LEGACY));
+    displayStatus("Thinking");
 
     new Thread(() -> {
       try {
