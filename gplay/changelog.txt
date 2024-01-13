@@ -1,0 +1,18 @@
+1.0 - 5 May, 2021:
+The first version, and hopefully also the last.
+
+2.0 - 10 May, 2021:
+- Minor UI changes.
+- Fixed the app restarting on orientation change etc.
+- Hopefully fixed a memory leak impacting Android 10 when pressing the back button.
+- Displays a message if you're likely unrooted. This doesn't show if you're rooted but have declined access, and it may also show if there's a different error. Let's just say it needs work.
+
+2.1 - 11 May, 2021:
+- Restrict the app to only being downloadable on devices that can actually change between portrait and landscape modes using an accelerometer.
+- Gave the farewell message a touch more enthusiasm.
+- Miscellaneous manifest changes.
+
+3.0 - 13 January, 2024:
+- Support Android 14.
+- Update minimum Android version to 9 (previously Android 8 users could install the app, where it would do nothing).
+- Reduce app size a little.
