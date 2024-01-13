@@ -9,24 +9,26 @@
   </string>
   <string name="textAfter">
     <![CDATA[
-      <strong>Important:</strong> As you should have noticed when downloading
-      this app, it will only work on rooted devices. If you don\'t know whether
-      your device is rooted or not, odds are it\'s not. Sorry, but I can\'t do
-      much about this.<br>
-      <br>
-      However, if you work out how to use <b>ADB</b> on a
+    <h1>Alternative</h1>
+      If you work out how to use <b>ADB</b> on a
       computer or use an app such as LADB, you can achieve the same
-      functionality by running <tt><font color="#808080">adb shell</font>
-      settings put secure show_rotation_suggestions 0</tt> to disable the
+      functionality this app provides by running \"<tt><font color="#888888">adb shell</font>
+      settings put secure show_rotation_suggestions 0</tt>\" to disable the
       button. Or replace the <tt>0</tt> with a <tt>1</tt> to bring it back.<br>
       <br>
-      Note that both this app and the ADB method <em>might</em> fail to eradicate
-      vendor-specific rotation buttons. Some vendors have their own toggles for
-      this ─ for example, in Samsung One UI you can tap the text below the
-      auto-rotate button in the notification bar to access settings.
+      Note that both this app and the ADB method <em>might</em> fail to
+      eradicate vendor-specific rotation buttons. Some vendors have their own
+      toggles for this ─ for example, in Samsung One UI you can tap the text
+      below the auto-rotate button in the notification bar to access settings.
 
     ]]>
   </string>
   <string name="refresh">Refresh</string>
-  <string name="happyRotating">Happy rotating!</string>
+  <string name="happyRotating">\nHappy rotating!\n</string>
+  <string name="couldNotFetchTitle">Couldn\'t fetch button status</string>
+  <string name="couldNotFetchMessage">
+    It\'s likely that you\'re either not rooted or haven\'t granted this app
+    superuser privileges. Unfortunately, this app can\'t function otherwise.
+    \nThis message won\'t show again until the app is restarted.
+  </string>
 </resources>
