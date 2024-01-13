@@ -131,15 +131,9 @@ public class MainActivity extends Activity {
     });
   }
 
-  private void toast(String message, int duration) {
-    Context context = getApplicationContext();
-    Toast toast = Toast.makeText(context, message, duration);
-    toast.show();
-  }
-
   @Override // Fix for Android 10 memory leak
   public void onBackPressed() {
-    toast(getString(R.string.goodbye), Toast.LENGTH_SHORT);
+    Toast.makeText(context, getString(R.string.goodbye), Toast.LENGTH_SHORT).show();
     finishAfterTransition();
   }
   
