@@ -10,10 +10,8 @@ android {
         applicationId "com.javacakegames.rotation"
         minSdkVersion 26
         targetSdkVersion 34
-        versionCode 3
-        versionName "2.1"
-
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        versionCode 4
+        versionName "3.0"
     }
 
     buildTypes {

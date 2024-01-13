@@ -1,5 +1,5 @@
 <resources>
-  <string name="app_name">Disable Floating Rotation Button</string>
+  <string name="app_name">Disable Rotation Button</string>
   <string name="disable">Disable</string>
   <string name="enable">Enable</string>
   <string name="textBefore">

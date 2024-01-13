@@ -3,12 +3,8 @@ package com.javacakegames.rotation;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
-import android.content.DialogInterface;
-import android.content.res.Configuration;
 import android.os.Bundle;
 import android.text.Html;
-import android.util.Log;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -16,12 +12,10 @@ import android.widget.Toast;
 import java.io.BufferedReader;
 import java.io.DataOutputStream;
 import java.io.InputStreamReader;
-import java.nio.Buffer;
-import java.util.Arrays;
 
 public class MainActivity extends Activity {
 
-  //todo: detect root before detecting if getting/setting rotation fails
+  // todo: detect root before detecting if getting/setting rotation fails
 
   Context context;
   private TextView textBefore;
@@ -40,16 +34,16 @@ public class MainActivity extends Activity {
 
     context = getApplicationContext();
 
-    refresh(null, null, null);
+    refresh(null, null);
 
   }
 
-    public void refresh(View view) {
+  public void refresh(View view) {
     textBefore.setText(Html.fromHtml(getString(R.string.textBefore).replace("Unknown", "Thinking"), Html.FROM_HTML_MODE_LEGACY));
-    refresh(null, null, null);
+    refresh(null, null);
   }
 
-  private int refresh(View view, BufferedReader br, DataOutputStream os) {
+  private int refresh(BufferedReader br, DataOutputStream os) {
     String status = "";
     try {
       if (br == null & os == null) {
@@ -112,12 +106,12 @@ public class MainActivity extends Activity {
         BufferedReader br = new BufferedReader(
           new InputStreamReader(p.getInputStream()));
         os.writeBytes("settings put secure show_rotation_suggestions " + value + "\n");
-        refresh(null, br, os);
+        refresh(br, os);
         //os.writeBytes("exit\n");
         //os.flush();
         //p.waitFor();
       } catch (Exception ignored) {
-        refresh(null, null, null);
+        refresh(null, null);
       }
 
     }).start();
@@ -144,7 +138,7 @@ public class MainActivity extends Activity {
     toast.show();
   }
 
-  @Override //Fix for Android 10 memory leak
+  @Override // Fix for Android 10 memory leak
   public void onBackPressed() {
     toast(getString(R.string.goodbye), Toast.LENGTH_SHORT);
     finishAfterTransition();
