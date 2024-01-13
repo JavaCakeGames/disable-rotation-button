@@ -18,7 +18,8 @@
       android:configChanges="density|fontScale|keyboard|keyboardHidden|layoutDirection|locale|mcc|mnc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|touchscreen|uiMode"
       android:launchMode="singleInstance"
       android:finishOnTaskLaunch="true"
-      android:persistableMode="persistNever">
+      android:persistableMode="persistNever"
+      android:exported="true">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />
         <category android:name="android.intent.category.LAUNCHER" />

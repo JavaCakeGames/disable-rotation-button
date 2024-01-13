@@ -3,15 +3,15 @@ plugins {
 }
 
 android {
-    compileSdkVersion 30
-    buildToolsVersion "30.0.2"
+    compileSdkVersion 34
+    namespace 'com.javacakegames.rotation'
 
     defaultConfig {
         applicationId "com.javacakegames.rotation"
         minSdkVersion 26
-        targetSdkVersion 30
-        versionCode 2
-        versionName "2.0"
+        targetSdkVersion 34
+        versionCode 3
+        versionName "2.1"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
