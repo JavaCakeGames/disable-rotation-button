@@ -2,19 +2,23 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
   package="com.javacakegames.rotation">
 
+  <uses-feature android:name="android.hardware.screen.portrait" />
+  <uses-feature android:name="android.hardware.screen.landscape" />
+  <uses-feature android:name="android.hardware.sensor.accelerometer" />
+
   <application
-    android:allowBackup="true"
+    android:allowBackup="false"
     android:icon="@mipmap/ic_launcher"
     android:label="@string/app_name"
     android:roundIcon="@mipmap/ic_launcher_round"
     android:supportsRtl="true"
     android:theme="@style/Theme.DisableFloatingRotationButton">
-    <!--android:finishOnTaskLaunch="true"
-    android:launchMode="singleInstance"
-    android:persistableMode="persistNever"-->
     <activity
       android:name=".MainActivity"
-      android:configChanges="density|fontScale|keyboard|keyboardHidden|layoutDirection|locale|mcc|mnc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|touchscreen|uiMode">
+      android:configChanges="density|fontScale|keyboard|keyboardHidden|layoutDirection|locale|mcc|mnc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|touchscreen|uiMode"
+      android:launchMode="singleInstance"
+      android:finishOnTaskLaunch="true"
+      android:persistableMode="persistNever">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />
         <category android:name="android.intent.category.LAUNCHER" />

@@ -146,7 +146,7 @@ public class MainActivity extends Activity {
 
   @Override //Fix for Android 10 memory leak
   public void onBackPressed() {
-    toast("Farewell, friend.", Toast.LENGTH_SHORT);
+    toast(getString(R.string.goodbye), Toast.LENGTH_SHORT);
     finishAfterTransition();
   }
   

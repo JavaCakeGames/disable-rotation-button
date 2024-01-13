@@ -31,4 +31,5 @@
     superuser privileges. Unfortunately, this app can\'t function otherwise.
     \nThis message won\'t show again until the app is restarted.
   </string>
+  <string name="goodbye">Farewell, friend!</string>
 </resources>
