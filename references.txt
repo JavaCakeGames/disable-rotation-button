@@ -1,0 +1,8 @@
+ADB Java: https://stackoverflow.com/a/13381888
+ADB rotate command 9.0: https://android.stackexchange.com/a/212608
+ADB rotate command 10.0: https://redd.it/lda1ck
+adb shell settings put secure show_rotation_suggestions 0
+https://source.android.com/devices/tech/display/rotate-suggestions
+http://lifepluslinux.blogspot.com/2015/10/using-writesecuresettings-permission-on.html
+https://shapeshifter.design/
+Android 10 leak: https://twitter.com/Piwai/status/1169274624749658112
