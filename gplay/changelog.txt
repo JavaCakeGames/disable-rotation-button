@@ -16,3 +16,7 @@ The first version, and hopefully also the last.
 - Support Android 14.
 - Update minimum Android version to 9 (previously Android 8 users could install the app, where it would do nothing).
 - Reduce app size a little.
+
+3.1 - 14 January 2024:
+- The previous version broke the refresh button! This update unbreaks it.
+- Support themed home screen icons.
