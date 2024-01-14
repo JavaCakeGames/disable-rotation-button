@@ -37,6 +37,12 @@ public class MainActivity extends Activity {
 
   }
 
+  // Used by refresh button
+  public void refresh(View view) {
+    textBefore.setText(Html.fromHtml(getString(R.string.textBefore).replace("Unknown", "Thinking"), Html.FROM_HTML_MODE_LEGACY));
+    refresh(null, null);
+  }
+
   private int refresh(BufferedReader br, DataOutputStream os) {
     String status = "";
     try {
@@ -81,10 +87,12 @@ public class MainActivity extends Activity {
 
   }
 
+  // Used by disable button
   public void disable(View view) {
     toggle(0);
   }
 
+  // Used by enable button
   public void enable(View view) {
     toggle(1);
   }
