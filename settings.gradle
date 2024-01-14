@@ -1,2 +1,2 @@
 include ':app'
-rootProject.name = "Disable Floating Rotation Button"
+rootProject.name = "Disable Rotation Button"
